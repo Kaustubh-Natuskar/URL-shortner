@@ -1,0 +1,4 @@
+{
+  "mongoURI" : "mongodb://localhost:27017/urls",
+  "baseURL" : "http://localhost:5000"
+}
