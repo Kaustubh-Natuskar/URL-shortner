@@ -1,4 +1,4 @@
 {
-  "mongoURI" : "mongodb://localhost:27017/urls",
-  "baseURL" : "http://localhost:5000"
+  "mongoURI" : "mongodb+srv://kaustubh:ksn@cluster0.cb4zr.mongodb.net/Cluster0?retryWrites=true&w=majority",
+  "baseURL" : "https://natuskar.herokuapp.com"
 }
