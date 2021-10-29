@@ -1,37 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Sortner</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <style>
-    .content {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 70px;
-    }
-    .input {
-      background-color:#FFF;
-      min-height:30px;
-      min-width: 500px;
-      font-size:14pt;
-
-      }
-
-      .button{
-        margin-top: 10px;
-        float: right;
-        background-color: green;
-        color: white;
-        height: 30px;
-        cursor: pointer;
-      }
-
-  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/URL-shortner/styles.css">
 </head>
+
 <body>
   <div class="content">
     <input class='input' type="text" placeholder="Please enter a url" id='urlInput' />
@@ -42,23 +21,26 @@
   </div>
 
   <script type="text/javascript">
-    $('#btn').click(function(){
+    $('#btn').click(function () {
 
       $.ajax({
         url: '/api/url/shorten',
         dataType: 'json',
         type: 'post',
-        data: JSON.stringify({ longUrl: $('#urlInput').val() }),
+        data: JSON.stringify({
+          longUrl: $('#urlInput').val()
+        }),
         contentType: "application/json",
-        success: function( data, textStatus, jQxhr ){
-            $('.view').html(  data.shortUrl );
-            $('.view').attr(  'href', data.shortUrl );
+        success: function (data, textStatus, jQxhr) {
+          $('.view').html(data.shortUrl);
+          $('.view').attr('href', data.shortUrl);
         },
-        error: function( jqXhr, textStatus, errorThrown ){
-            console.log( errorThrown );
+        error: function (jqXhr, textStatus, errorThrown) {
+          console.log(errorThrown);
         }
       });
     });
   </script>
 </body>
+
 </html>
