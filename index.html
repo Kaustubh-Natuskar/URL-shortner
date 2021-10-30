@@ -6,45 +6,96 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Sortner</title>
- 
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<style>
-  
-   .content {
-   max-width: 500px;
-   margin: auto;
-   background: white;
-   padding: 70px;
-   }
-   .input {
-   background-color:#FFF;
-   min-height:30px;
-   min-width: 500px;
-   font-size:14pt;
+  <style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 70px;
+    }
 
-   }
+    .input {
+      text-align: left;
+      border-width: 1px;
+      background-color: #FFF;
+      min-height: 30px;
+      min-width: 500px;
+      font-size: 14pt;
+      color: #000000;
+      border-style: solid;
+      box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+      text-shadow: 0px 0px 0px rgba(66, 66, 66, .75);
 
-   .button{
+    }
+     .css-input:focus {
+     outline:none;
+     }
+
+    .view {
+      text-decoration: none;
+    }
+    a:hover{
+      color: FEE440;
+    }
+
+    /* .button{
    margin-top: 10px;
    float: right;
    background-color: green;
    color: white;
    height: 30px;
    cursor: pointer;
-   }
+   } */
+    .button {
+      margin-top: 10px;
+      float: right;
+      /* background-color: green; */
+      color: white;
+      height: 30px;
+      cursor: pointer;
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      -webkit-border-radius: 28;
+      -moz-border-radius: 28;
+      border-radius: 28px;
+      font-family: Arial;
+      color: #ffffff;
+      /* font-size: 20px; */
+      /* padding: 10px 20px 10px 20px; */
+      text-decoration: none;
+    }
 
-  
-</style>
+    .button:hover {
+      background: #3cb0fd;
+      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="content">
-    <input class='input' type="text" placeholder="Please enter a url" id='urlInput' />
-    <button class='button' id='btn'>Create Short URL</button>
-  </div>
-  <div class="content ">
-    <a target="_blank" href='' class='view'></a>
+  <div class="main-container">
+
+    <div class="content">
+      <input class='input' type="text" placeholder="Please enter a url" id='urlInput' />
+      <button class='button' id='btn'>Create Short URL</button>
+    </div>
+
+    <div class="content " id="link">
+      <a target="_blank" href='' class='view'></a>
+    </div>
+
   </div>
 
   <script type="text/javascript">
