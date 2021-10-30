@@ -6,42 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Sortner</title>
- 
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<style>
-  html{
-    font-size:62.5%;
-  }
-   .content {
-   max-width: 500px;
-   margin: auto;
-   background: black;
-   padding: 70px;
-   }
-   .input {
-   background-color:#FFF;
-   min-height:30px;
-   min-width: 500px;
-   font-size:14pt;
+  <style>
+    html {
+      font-size: 62.5%;
+    }
 
-   }
+    .content {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 70px;
+    }
 
-   .button{
-   margin-top: 10px;
-   float: right;
-   background-color: green;
-   color: white;
-   height: 30px;
-   cursor: pointer;
-   }
+    .input {
+      background-color: #FFF;
+      min-height: 30px;
+      min-width: 500px;
+      font-size: 14pt;
 
-   @media(max-width:998px){
-     html{
-       font-size: 55%;
-     }
-   }
-</style>
+    }
+
+    .button {
+      margin-top: 10px;
+      float: right;
+      background-color: green;
+      color: white;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    @media(max-width:998px) {
+      html {
+        font-size: 55%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -49,7 +51,7 @@
     <input class='input' type="text" placeholder="Please enter a url" id='urlInput' />
     <button class='button' id='btn'>Create Short URL</button>
   </div>
-  
+
 
   <script type="text/javascript">
     $('#btn').click(function () {
