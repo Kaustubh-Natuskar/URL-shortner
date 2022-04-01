@@ -1,21 +1,29 @@
 {
-  "name": "URLSortner",
+  "name": "shortly",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "config": "^3.3.6",
-    "express": "^4.17.1",
-    "mongoose": "^5.13.13",
-    "shortid": "^2.2.16",
-    "valid-url": "^1.0.9"
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "memorystore": "^1.6.7",
+    "mongoose": "^5.13.14",
+    "nodemailer": "^6.7.3",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
